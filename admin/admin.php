@@ -10,7 +10,7 @@
 ?>
 
 <body>
-    <?php include_once '../public/includes/_header.php'; ?>
+    <?php include_once '../include/_header.php'; ?>
     <h1>Manage Posts</h1>
     <a href="addPost.php">Add Post</a>
     <a href="logout.php">Log Out</a>
@@ -42,5 +42,5 @@
             }
         ?>
     </table>
-    <?php include_once '../public/includes/_footer.php' ?>
+    <?php include_once '../include/_footer.php' ?>
 </body>

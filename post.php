@@ -1,4 +1,4 @@
-<?php require_once '../include/initialize.php'; ?>
+<?php require_once 'include/initialize.php'; ?>
 
 <?php
         $id = isset($_GET["id"]) ? $_GET["id"] : null;
@@ -20,11 +20,11 @@
 
 ?>
 
-<?php require_once '../include/head.php'; ?>
+<?php require_once 'include/head.php'; ?>
 
 <body class="single-post">
     <?php 
-        include_once 'includes/_header.php'; 
+        include_once 'include/_header.php'; 
         while($post = mysqli_fetch_assoc($result)){
     ?>
 
@@ -41,5 +41,5 @@
     }
     ?>
 
-    <?php include_once "includes/_footer.php"; ?>
+    <?php include_once "include/_footer.php"; ?>
 </body>

@@ -25,7 +25,7 @@
 ?>
 
 <body>
-  <?php include_once '../public/includes/_header.php'; ?>
+  <?php include_once '../include/_header.php'; ?>
   <div>
     <main>
       <h1>Add new post</h1>
@@ -88,6 +88,6 @@
     });
   </script>
 
-  <?php include_once '../public/includes/footer.php'; ?>
+  <?php include_once '../include/footer.php'; ?>
 </body>
 </html>

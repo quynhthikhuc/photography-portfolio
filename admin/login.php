@@ -11,7 +11,7 @@
 ?>
 
 <body id="login">
-    <?php include_once '../public/includes/_header.php'; ?>
+    <?php include_once '../include/_header.php'; ?>
     <main>
         <h1><b id="login-title">LOGIN</b></h1>
         <form method="post">
@@ -53,7 +53,7 @@
             }
         ?>
 
-        <?php include_once '../public/includes/_footer.php' ?>
+        <?php include_once '../include/_footer.php' ?>
     <main>
 </body>
 </html>

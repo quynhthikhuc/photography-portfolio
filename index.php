@@ -1,11 +1,11 @@
-<?php require_once '../include/initialize.php'; ?>
-<?php require_once '../include/head.php'; ?>
+<?php require_once 'include/initialize.php'; ?>
+<?php require_once 'include/head.php'; ?>
 
 <body>
-    <?php include_once 'includes/_header.php'; ?>
+    <?php include_once 'include/_header.php'; ?>
     <main id="home-main">
         <h1>Hi, I'm <b id="fname">Quinn</b></h1>
-        <p id="introduction">I'm an aspiring web developer who happened to find photography as a side hobby. If you want to view my Web Development and UI/UX portfolio, <a id="back-to-main" href="#">please visit this site.</a></p>
+        <p id="introduction">I'm an aspiring web developer who happened to find photography as a side hobby. If you want to view my Web Development and UI/UX portfolio, <a id="back-to-main" href="http://quynhthikhuc.com/" target="_blank">please visit this site.</a></p>
         <div id="work">
         <?php 
             $query = 'SELECT * FROM posts';
@@ -31,6 +31,6 @@
         </div>
     </main>
 
-    <?php require_once "includes/_footer.php"; ?>
+    <?php require_once "include/_footer.php"; ?>
 </body>
 </html>

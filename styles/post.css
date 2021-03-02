@@ -5,8 +5,15 @@
 }
 
 .single-post h1 p{
+    background-color: var(--purple);
+    color: var(--black);
+    display: inline;
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 4rem;
+    padding: 0 0.2rem;
+}
+
+.single-post h1{
     margin-bottom: 1rem;
 }
