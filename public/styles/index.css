@@ -1,0 +1,45 @@
+#back-to-main{
+    background-color: var(--purple);
+    color: var(--black);
+    font-weight: 600;
+    padding: 0 0.2rem;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#back-to-main:hover{
+    background-color: #d8d7fc;
+}
+
+#fname{
+    background-color: var(--orange);
+    line-height: 5.5rem;
+}
+
+#home-main .work{
+    overflow: hidden;
+    width: 100%;
+}
+
+#home-main img{
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+	transition: .3s ease-in-out;
+}
+
+#home-main img:hover{
+    transform: scale(1.2);
+}
+
+#home-main h1, #introduction{
+    margin: 0 auto;
+    width: 80%;
+}
+
+#work{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    margin-top: 2rem;
+}

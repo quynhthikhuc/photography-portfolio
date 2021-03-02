@@ -8,7 +8,7 @@
         } else {
             $query = 'SELECT * ';
             $query .= 'FROM posts ';
-            $query .= "WHERE ID = '{$id}' ";
+            $query .= "WHERE id = '{$id}' ";
             $query .= 'LIMIT 1';
 
             $result = mysqli_query($connection, $query);
@@ -24,16 +24,16 @@
 
 <body class="single-post">
     <?php 
-        require_once 'includes/_header.php'; 
+        include_once 'includes/_header.php'; 
         while($post = mysqli_fetch_assoc($result)){
     ?>
 
     <main>
         <h1>
-            <?php echo $post['Title']; ?>
+            <?php echo $post['title']; ?>
         </h1>
         <div>
-            <?php echo $post['PostContent']; ?>
+            <?php echo $post['content']; ?>
         </div>
     </main>
 
@@ -41,5 +41,5 @@
     }
     ?>
 
-    <?php require_once "includes/_footer.php"; ?>
+    <?php include_once "includes/_footer.php"; ?>
 </body>

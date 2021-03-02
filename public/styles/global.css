@@ -1,0 +1,61 @@
+:root{
+    --black: #000;
+    --white: #FFF;
+    --blue: #63FFFF;
+    --purple: #BCBAFD;
+    --purple-pink: #DEB3FF;
+    --pink: #FFB0DD;
+    --orange: #FFA0A0;
+    --yellow: #FFFCA8;
+    --yellow-green: #CCFFA5;
+    --green: #A5FFC9;
+}
+
+html{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+body{
+    margin: 2.5rem auto;
+    width: 80%;
+    font-size: 1.3rem;
+    line-height: 2.25rem;
+}
+
+a{
+    color: var(--white);
+}
+
+b{
+    color: var(--black);
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 5rem;
+}
+
+header, main, footer{
+    display: none;
+}
+
+p{
+    font-size: 1.3rem;
+    line-height: 2.25rem;
+}
+
+.mobile{
+    text-align: center;
+}
+
+@media(min-width: 900px){
+    .mobile{
+        display: none;
+    }
+
+    header, main, footer{
+        display: block;
+    }
+}

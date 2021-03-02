@@ -3,47 +3,44 @@
 
 <?php
   if (isset($_POST["submit"])) {
-    $Title = mysqli_real_escape_string($connection, $_POST['Title']);
-    $CoverImage = mysqli_real_escape_string($connection, $_POST['CoverImage']);
-    $PostContent = mysqli_real_escape_string($connection, $_POST['PostContent']);
+    $title = mysqli_real_escape_string($connection, $_POST['title']);
+    $metadata = mysqli_real_escape_string($connection, $_POST['metadata']);
+    $content = mysqli_real_escape_string($connection, $_POST['content']);
 
     // validation
 
     $query = "INSERT INTO posts (";
-    $query .= " CoverImage, Title, PostContent";
+    $query .= " metadata, title, content";
     $query .= ") VALUES (";
-    $query .= " '{$CoverImage}', '{$Title}', '{$PostContent}'";
+    $query .= " '{$metadata}', '{$title}', '{$content}'";
     $query .= ")";
 
     // error_log($query);
 
     $result = mysqli_query($connection, $query);
 
-    if ($result) {
-      $message = '<div class="alert alert-success" role="alert">Post uploaded!</div>';
-    } else {
-      $message = '<div class="alert alert-danger" role="alert">Post upload failed.</div>';
-    }
+    header('Location: admin.php');
+    exit;
   }
 ?>
-<?php include_once '../public/includes/_header.php'; ?>
 
 <body>
+  <?php include_once '../public/includes/_header.php'; ?>
   <div>
     <main>
       <h1>Add new post</h1>
       <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <div>
-          <label for="CoverImage">Post Cover Image</label>
-          <input type="textarea" name="CoverImage" require>
+          <label for="metadata">Post MetaData</label>
+          <textarea name="metadata" require></textarea>
         </div>
         <div>
-          <label for="Title">Post Title</label>
-          <textarea name="Title" require></textarea>
+          <label for="title">Post Title</label>
+          <textarea name="title" require></textarea>
         </div>
         <div>
-          <label for="PostContent">Post Content</label>
-          <textarea name="PostContent" require></textarea>
+          <label for="content">Post Content</label>
+          <textarea name="content" require></textarea>
         </div>
         <button type="submit" name="submit">Create post</button>
       </form>
@@ -52,7 +49,7 @@
   </div>
 
   <script src="https://cdn.tiny.cloud/1/rbkgwjbarzymqqu84k0ovrb7zqwuj456p02ogl91ms0jbdkm/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
+  
   <script>
     tinymce.init({
       selector: 'textarea',

@@ -10,7 +10,7 @@
 ?>
 
 <body>
-    <?php require_once '../public/includes/_header.php'; ?>
+    <?php include_once '../public/includes/_header.php'; ?>
     <h1>Manage Posts</h1>
     <a href="addPost.php">Add Post</a>
     <a href="logout.php">Log Out</a>
@@ -32,16 +32,15 @@
             while ($post = mysqli_fetch_assoc($result)) {
             
                 echo '<tr>';
-                echo '<td>'.$post['Title'].'</td>';
+                echo '<td>'.$post['title'].'</td>';
                 echo '<td>';
-                echo '<a href="editPost.php?id=';
-                echo urlencode($post['ID']);
-                echo '">Edit</a>';
+                echo '<a href="#">Edit</a>';
                 echo '<a href="deletePost.php?id=';
-                echo urlencode($post['ID']);
+                echo urlencode($post['id']);
                 echo '">Delete</a>';
                 echo '</tr>';
             }
         ?>
     </table>
+    <?php include_once '../public/includes/_footer.php' ?>
 </body>

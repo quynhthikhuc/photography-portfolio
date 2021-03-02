@@ -1,0 +1,21 @@
+header{
+    display: none;
+}
+
+@media(min-width: 900px){
+    header{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    
+    header a{
+        text-decoration: none;
+    }
+    
+    .login{
+        justify-self: end;
+    }
+}
