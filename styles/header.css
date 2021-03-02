@@ -18,4 +18,8 @@ header{
     .login{
         justify-self: end;
     }
+
+    #logo{
+        font-weight: 600;
+    }
 }

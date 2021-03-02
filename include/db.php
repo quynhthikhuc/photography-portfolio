@@ -1,8 +1,8 @@
 <?php
-  define('DB_SERVER', '162.241.24.62');
-  define('DB_USER', 'quynhthi_khuc');
-  define('DB_PASS', '4Y?H2cv}jvGH');
-  define('DB_NAME', 'quynhthi_photography-portfolio');
+  define('DB_SERVER', 'localhost');
+  define('DB_USER', 'root');
+  define('DB_PASS', 'root');
+  define('DB_NAME', 'photography-portfolio');
 
   $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
